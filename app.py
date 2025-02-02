@@ -29,33 +29,33 @@ def rewrite_resume(text):
     prompt = f"""
     Given the following resume text, extract the key details and rewrite it in the following structured format Don't add any extra fields only follow the format:
 
-    Name of the person who's resume is uploaded in bold
+    <h1>Name of the person who's resume is uploaded in bold</h1>
 
-    **Professional Summary:**  
+    <h3>**Professional Summary:**</h3>
     - - A concise overview of the candidate's experience and skills
 
     -------------------------------------------- add this to seperate Professional Summary and Primary Skillsets field
 
-    **Primary Skillsets:**  
+    <h3>**Primary Skillsets:**</h3>
     - A bullet-point list of the candidate's main technical and soft skills.
 
     -------------------------------------------- add this to seperate Primary Skillsets and Education field
 
-    **Education:**  
+    <h3>**Education:**</h3>
     - Degree, institution, and year of graduation.
 
     -------------------------------------------- add this to seperate Eduction and projects field
 
-    **Projects:**  
-    - List of key projects. 
+    <h3>**Projects:**</h3>
+    - List of key projects.
       with each projects in the following format:
-      Name of the project in bold
-      - Role: The position or role of the candidate during the project
-      - Enviroment: should contain the tech and editor used for the project
-      - Description: about the project
-      - Responsibilities: the work done by the candidate 
+      <h3>Name of the project in bold</h3>
+      - **Role:** The position or role of the candidate during the project
+      - **Enviroment:** should contain the tech and editor used for the project
+      - **Description:** about the project
+      - **Responsibilities:** the work done by the candidate
 
-      ------------------------------------------------- add this to seperate each project 
+      ------------------------------------------------- add this to seperate each project
 
     Here is the original resume text:
     {text}
