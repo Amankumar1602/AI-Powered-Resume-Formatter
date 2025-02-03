@@ -47,9 +47,11 @@ def rewrite_resume(text):
     -------------------------------------------- add this to seperate Eduction and projects field
 
     **Projects:**
+    
     - List of key projects.
       with each projects in the following format:
-      Name of the project in bold
+      Name of the project in bold then one line space
+
       - Role: The position or role of the candidate during the project
       - Enviroment: should contain the tech and editor used for the project
       - Description: about the project
@@ -64,7 +66,7 @@ def rewrite_resume(text):
     """
 
     response = client.chat.completions.create(
-        model="gpt-4",
+        model="gpt-4-turbo",
         messages=[
             {"role": "system", "content": "You are a helpful assistant."},
             {"role": "user", "content": prompt}
